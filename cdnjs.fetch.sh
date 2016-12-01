@@ -2,6 +2,8 @@
 
 echo "CDNJS repo objects fetch process, no git clone or checkout here!"
 
+git --version
+
 err() { >&2 echo "$@" ; exit 1 ; }
 
 if [ "${CI}" != "drone" ] && [ "${DRONE}" != "true" ]; then err "Not a Drone CI environment"; fi
