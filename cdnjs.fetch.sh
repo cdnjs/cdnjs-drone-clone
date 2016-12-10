@@ -17,5 +17,9 @@ else
     err "When does CDNJS drop GitHub? No idea!"
 fi
 
+if git remote | grep pre-fetch; then
+    git fetch pre-fetch "${DRONE_REPO_BRANCH}"   --depth=50
+fi
+
 git fetch origin "${DRONE_REPO_BRANCH}"   --depth=50
 git fetch origin "${DRONE_COMMIT_BRANCH}" --depth=50
