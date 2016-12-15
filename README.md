@@ -1,10 +1,7 @@
 cdnjs-drone-clone
 ========================
 
-![license](https://img.shields.io/badge/license-GPLv3.0-brightgreen.svg?style=flat)
-![](https://img.shields.io/docker/pulls/peterdavehello/cdnjs-drone-clone.svg)
-![](https://images.microbadger.com/badges/image/peterdavehello/cdnjs-drone-clone.svg)
-![](https://images.microbadger.com/badges/version/peterdavehello/cdnjs-drone-clone.svg)
+![license](https://img.shields.io/badge/license-GPLv3.0-brightgreen.svg?style=flat) ![](https://img.shields.io/docker/pulls/peterdavehello/cdnjs-drone-clone.svg) ![](https://images.microbadger.com/badges/image/peterdavehello/cdnjs-drone-clone.svg) ![](https://images.microbadger.com/badges/version/peterdavehello/cdnjs-drone-clone.svg)
 
 A [Drone](https://drone.io) CI v0.5 plugin to help we fetch the remote objects on cache git repo instead of clone the repo.
 
