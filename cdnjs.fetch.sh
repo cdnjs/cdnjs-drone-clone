@@ -1,4 +1,7 @@
 #!/bin/sh
+
+. /ColorEcho.sh
+
 set -e
 
 echo "CDNJS repo objects fetch process, no git clone or checkout here!"
