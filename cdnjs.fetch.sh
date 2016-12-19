@@ -20,7 +20,7 @@ if [ ! -d ".git" ]; then err "Cache .git directory not found!!! What's going on?
 if [ -n "${DRONE_PULL_REQUEST}" ]; then DRONE_COMMIT_BRANCH="pull/${DRONE_PULL_REQUEST}/head"; fi
 
 if echo "${DRONE_REPO_LINK}" | grep 'github.com' > /dev/null 2>&1 ; then
-    wget "${DRONE_REPO_LINK}/raw/${DRONE_COMMIT_SHA}/${PLUGIN_SPARSECHECKOUT}" -O ".git/info/sparse-checkout" &
+    wget "$(echo "${DRONE_REPO_LINK}" | sed 's/github.com/raw.githubusercontent.com/g')/${DRONE_COMMIT_SHA}/${PLUGIN_SPARSECHECKOUT}" -O ".git/info/sparse-checkout" &
 else
     err "When does CDNJS drop GitHub? No idea!"
 fi
