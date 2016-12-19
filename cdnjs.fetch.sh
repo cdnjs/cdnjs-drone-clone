@@ -9,9 +9,9 @@ echoCyan "CDNJS repo objects fetch process, no git clone or checkout here!"
 git --version
 
 err() {
-    >&2 echoRed -e "\n==========ERROR==========\n";
+    >&2 echoRed "\n==========ERROR==========\n";
     >&2 echoBoldRed "$@";
-    >&2 echoRed -e "\n==========ERROR==========\n";
+    >&2 echoRed "\n==========ERROR==========\n";
     exit 1;
 }
 
