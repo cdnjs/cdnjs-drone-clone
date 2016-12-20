@@ -26,8 +26,8 @@ else
 fi
 
 if git remote | grep pre-fetch > /dev/null 2>&1 ; then
-    git fetch pre-fetch "${DRONE_REPO_BRANCH}"   --depth=180
+    git fetch pre-fetch "${DRONE_REPO_BRANCH}":"${DRONE_REPO_BRANCH}" -f
 fi
 
-git fetch origin "${DRONE_REPO_BRANCH}"   --depth=150
-git fetch origin "${DRONE_COMMIT_BRANCH}" --depth=150
+git fetch origin "${DRONE_REPO_BRANCH}"   --depth=100
+git fetch origin "${DRONE_COMMIT_BRANCH}" --depth=100
