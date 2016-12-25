@@ -26,7 +26,9 @@ else
 fi
 
 if git remote | grep pre-fetch > /dev/null 2>&1 ; then
-    git fetch pre-fetch "${DRONE_REPO_BRANCH}":"${DRONE_REPO_BRANCH}" -f > /dev/null 2>&1
+    git fetch pre-fetch "${DRONE_REPO_BRANCH}":"${DRONE_REPO_BRANCH}" -f > /dev/null 2>&1 || {
+        git fetch origin "${DRONE_COMMIT_BRANCH}" "${DRONE_REPO_BRANCH}":"${DRONE_REPO_BRANCH}" -f
+    }
 else
     git fetch origin "${DRONE_REPO_BRANCH}":"${DRONE_REPO_BRANCH}" -f
 fi
