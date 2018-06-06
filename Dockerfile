@@ -1,5 +1,7 @@
 FROM alpine:3.5
-MAINTAINER Peter Dave Hello <hsu@peterdavehello.org>
+LABEL maintainer='Peter Dave Hello <hsu@peterdavehello.org>'
+LABEL name='cdnjs-drone-clone'
+LABEL version='latest'
 ADD cdnjs.fetch.sh /bin/
 ADD ColorEchoForShell/dist/ColorEcho.sh /
 RUN apk -U upgrade && \
