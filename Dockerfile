@@ -1,4 +1,4 @@
-FROM alpine:3.5
+FROM alpine:3.8
 LABEL maintainer='Peter Dave Hello <hsu@peterdavehello.org>'
 LABEL name='cdnjs-drone-clone'
 LABEL version='latest'
